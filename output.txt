@@ -1,0 +1,124 @@
+[1mREQUEST: [2018-01-29T17:38:25-08:00][0m
+GET /v2/info HTTP/1.1
+Host: api.run.pivotal.io
+Accept: application/json
+User-Agent: cf/6.34.1+bfe1aa8a5.2018-01-29 (go1.9.3; amd64 linux)
+
+[1mRESPONSE: [2018-01-29T17:38:26-08:00][0m
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 599
+Content-Type: application/json;charset=utf-8
+Date: Tue, 30 Jan 2018 01:38:26 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: b6a8dee5-bc6b-4c32-6c88-cf499f53b135::b66cb0fd-6fb5-4e79-ba8e-435c274e2097
+{
+  "api_version": "2.101.0",
+  "app_ssh_endpoint": "ssh.run.pivotal.io:2222",
+  "app_ssh_host_key_fingerprint": "e7:13:4e:32:ee:39:62:df:54:41:d7:f7:8b:b2:a7:6b",
+  "app_ssh_oauth_client": "ssh-proxy",
+  "authorization_endpoint": "https://login.run.pivotal.io",
+  "build": "",
+  "description": "Cloud Foundry sponsored by Pivotal",
+  "doppler_logging_endpoint": "wss://doppler.run.pivotal.io:443",
+  "min_cli_version": "6.22.0",
+  "min_recommended_cli_version": "latest",
+  "name": "",
+  "routing_endpoint": "https://api.run.pivotal.io/routing",
+  "support": "https://support.run.pivotal.io",
+  "token_endpoint": "https://uaa.run.pivotal.io",
+  "version": 0
+}
+
+
+[1mREQUEST: [2018-01-29T17:38:26-08:00][0m
+GET /login HTTP/1.1
+Host: login.run.pivotal.io
+Accept: application/json
+Connection: close
+User-Agent: cf/6.34.1+bfe1aa8a5.2018-01-29 (go1.9.3; amd64 linux)
+
+[1mRESPONSE: [2018-01-29T17:38:26-08:00][0m
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Cache-Control: no-store
+Content-Language: en-US
+Content-Length: 429
+Content-Type: application/json;charset=UTF-8
+Date: Tue, 30 Jan 2018 01:38:26 GMT
+Expires: 0
+Pragma: no-cache
+Set-Cookie: X-Uaa-Csrf=Uyl79JxsRXSuf4jK6QrGkK; Max-Age=86400; Expires=Wed, 31-Jan-2018 01:38:26 GMT; Secure; HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: aac65889-4195-45b1-6930-bcb2bb66a5e7
+X-Xss-Protection: 1; mode=block
+{
+  "app": {
+    "version": "4.8.3"
+  },
+  "commit_id": "7828569",
+  "entityID": "login.run.pivotal.io",
+  "idpDefinitions": {},
+  "links": {
+    "login": "https://login.run.pivotal.io",
+    "passwd": "https://account.run.pivotal.io/forgot-password",
+    "register": "https://account.run.pivotal.io/sign-up",
+    "uaa": "https://uaa.run.pivotal.io"
+  },
+  "prompts": {
+    "password": [
+      "password",
+      "Password"
+    ],
+    "username": [
+      "text",
+      "Email"
+    ]
+  },
+  "timestamp": "2018-01-10T11:52:19-0800",
+  "zone_name": "uaa"
+}
+
+
+API endpoint: [36;1mhttps://api.run.pivotal.io[0m
+Authenticating...
+[1mREQUEST: [2018-01-29T17:38:26-08:00][0m
+POST /oauth/token HTTP/1.1
+Host: login.run.pivotal.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+User-Agent: cf/6.34.1+bfe1aa8a5.2018-01-29 (go1.9.3; amd64 linux)
+[PRIVATE DATA HIDDEN]
+
+[1mRESPONSE: [2018-01-29T17:38:27-08:00][0m
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Cache-Control: no-store
+Content-Length: 2480
+Content-Type: application/json;charset=UTF-8
+Date: Tue, 30 Jan 2018 01:38:26 GMT
+Expires: 0
+Pragma: no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: 40b4046f-86ec-461f-4a0e-8c8cded97f7d
+X-Xss-Protection: 1; mode=block
+{
+  "access_token": "[PRIVATE DATA HIDDEN]",
+  "expires_in": 599,
+  "jti": "f3dd4505301d451b9bd5ee56126ac048",
+  "refresh_token": "[PRIVATE DATA HIDDEN]",
+  "scope": "openid uaa.user cloud_controller.read password.write cloud_controller.write",
+  "token_type": "[PRIVATE DATA HIDDEN]"
+}
+
+
+[32;1mOK[0m
+Use '[36;1mcf target[0m' to view or set your target org and space.
