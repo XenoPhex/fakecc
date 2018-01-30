@@ -16,7 +16,8 @@ API URL: http://localhost:8080
 
 With the CF CLI, target the server:
 ```
-$ cf api --skip-ssl-validation http://localhost:8080Setting api endpoint to http://localhost:8080...
+$ cf api --skip-ssl-validation http://localhost:8080
+Setting api endpoint to http://localhost:8080...
 Warning: Insecure http API endpoint detected: secure https API endpoints are recommended
 OK
 
